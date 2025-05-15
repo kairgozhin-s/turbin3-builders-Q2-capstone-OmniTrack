@@ -1,27 +1,27 @@
-# OmniTrack 2.0 - Solana Portfolio Tracker
+# OmniTrack - Solana Portfolio Tracker
 
 A modern, efficient Solana portfolio tracking application that allows users to monitor their entire Solana ecosystem portfolio in one place.
 
 ## Features
 
-- 🔐 **Authentication & User Management**
+ **Authentication & User Management**
   - Wallet connection (Phantom)
   - Session management
   - User preferences storage
 
-- 📊 **Portfolio Dashboard**
+   **Portfolio Dashboard**
   - Real-time portfolio value display
   - Asset allocation visualization
   - Performance metrics (24h, 7d, 30d, ALL)
   - Price change indicators
 
-- 💰 **Asset Tracking**
+   **Asset Tracking**
   - Native SOL balance
   - SPL tokens with real-time prices
   - NFT holdings with floor prices
   - Transaction history
 
-- 🏦 **DeFi Integration**
+   **DeFi Integration**
   - Liquidity positions tracking
   - Staking positions
   - Yield farming positions
