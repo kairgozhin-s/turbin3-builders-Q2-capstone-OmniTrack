@@ -2,12 +2,10 @@ import { Metadata } from 'next';
 import { config } from '@/lib/config';
 import { PortfolioAddressContent } from '@/components/portfolio/PortfolioAddressContent';
 
-interface Props {
-  params: {
-    address: string;
-  };
-  searchParams?: { [key: string]: string | string[] | undefined };
-}
+type Props = {
+  params: { address: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 export const metadata: Metadata = {
   title: `Portfolio | ${config.app.name}`,

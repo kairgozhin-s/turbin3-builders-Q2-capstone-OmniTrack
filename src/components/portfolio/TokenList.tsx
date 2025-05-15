@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 interface Token {
@@ -68,11 +69,15 @@ export const TokenList: FC<Props> = ({ tokens, isLoading, className }) => {
           {tokens.map((token) => (
             <div key={token.mint} className="flex items-center space-x-4">
               {token.logoURI ? (
-                <img
-                  src={token.logoURI}
-                  alt={token.symbol || token.mint}
-                  className="h-10 w-10 rounded-full"
-                />
+                <div className="relative h-10 w-10">
+                  <Image
+                    src={token.logoURI}
+                    alt={token.symbol || token.mint}
+                    fill
+                    className="rounded-full object-cover"
+                    unoptimized
+                  />
+                </div>
               ) : (
                 <div className="h-10 w-10 rounded-full bg-muted flex items-center justify-center">
                   {(token.symbol || token.mint.slice(0, 2)).toUpperCase()}
