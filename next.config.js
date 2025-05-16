@@ -15,14 +15,9 @@ const nextConfig = {
     '@solana/wallet-adapter-react-ui',
     '@solana/wallet-adapter-wallets',
   ],
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/dashboard',
-        permanent: true,
-      },
-    ];
+  experimental: {
+    serverComponents: true,
+    concurrentFeatures: true,
   },
 };
 
