@@ -10,7 +10,12 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/dashboard');
+    // Add a small delay to ensure the router is ready
+    const timer = setTimeout(() => {
+      router.replace('/dashboard');
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, [router]);
 
   return (
