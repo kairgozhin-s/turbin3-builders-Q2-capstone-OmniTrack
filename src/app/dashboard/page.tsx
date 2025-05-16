@@ -1,13 +1,6 @@
 "use client";
 
-import { Metadata } from 'next';
-import { config } from '@/lib/config';
 import { DashboardContent } from '@/components/dashboard/DashboardContent';
-
-export const metadata: Metadata = {
-  title: `Dashboard | ${config.app.name}`,
-  description: 'View your Solana portfolio performance',
-};
 
 export default function DashboardPage() {
   return (
