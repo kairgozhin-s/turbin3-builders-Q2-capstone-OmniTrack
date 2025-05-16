@@ -4,6 +4,7 @@ import { config } from "@/lib/config";
 import { WalletContextProvider } from "@/components/shared/WalletContextProvider";
 import { QueryClientProvider } from "@/components/shared/QueryClientProvider";
 import { Navigation } from "@/components/shared/Navigation";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
           <WalletContextProvider>
             <div className="min-h-screen flex flex-col">
               <Navigation />
-              <main className="flex-1">{children}</main>
+              <Suspense fallback={<div className="flex-1 flex items-center justify-center">Loading...</div>}>
+                <main className="flex-1">{children}</main>
+              </Suspense>
             </div>
           </WalletContextProvider>
         </QueryClientProvider>
