@@ -1,8 +1,18 @@
+"use client";
+
 import { ConnectWallet } from '@/components/shared/ConnectWallet';
 import { WalletConnectionHandler } from '@/components/shared/WalletConnectionHandler';
 import { config } from '@/lib/config';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/dashboard');
+  }, [router]);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24">
       <WalletConnectionHandler />

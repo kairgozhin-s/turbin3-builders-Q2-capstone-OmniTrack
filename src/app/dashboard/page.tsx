@@ -1,3 +1,5 @@
+"use client";
+
 import { Metadata } from 'next';
 import { config } from '@/lib/config';
 import { DashboardContent } from '@/components/dashboard/DashboardContent';
