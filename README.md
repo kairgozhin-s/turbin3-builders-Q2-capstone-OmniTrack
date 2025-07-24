@@ -45,50 +45,6 @@ A modern, efficient Solana portfolio tracking application that allows users to m
   - Prisma with PostgreSQL
   - Redis for caching (optional)
 
-## Getting Started
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/omnitrack.git
-   cd omnitrack
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Set up environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-   Fill in your environment variables in the `.env` file.
-
-4. Initialize the database:
-   ```bash
-   npx prisma generate
-   npx prisma db push
-   ```
-
-5. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-```env
-# Database
-DATABASE_URL="postgresql://user:password@localhost:5432/omnitrack"
-
-# Solana RPC
-NEXT_PUBLIC_SOLANA_RPC_ENDPOINT="turbine-solanad-1176"
-NEXT_PUBLIC_SOLANA_RPC_TOKEN="fb59aa59-6117-46f0-8657-236aa21dfe5b"
-```
 
 ## Project Structure
 
@@ -117,15 +73,3 @@ omnitrack/
 └── prisma/
   └── schema.prisma
 ```
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
